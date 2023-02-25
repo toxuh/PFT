@@ -1,0 +1,81 @@
+@import 'src/theme/colors'
+
+$border-radius: 16px
+
+.navbar
+  background: linear-gradient(to left bottom, rgba($light, 0.06), rgba($light, 0.01)) !important
+  border: 1px solid rgba(255, 255, 255, 0.04)
+  border-radius: $border-radius
+  padding: 20px
+  position: relative
+
+  &__logo
+    font-size: 20px
+    font-weight: 600
+    margin: 30px 0
+    overflow: hidden
+    text-align: center
+    white-space: nowrap
+
+  &__toggle-button
+    background-color: $purple
+    border-radius: 0 $border-radius 0 $border-radius
+    cursor: pointer
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+
+    &:hover
+      background-color: lighten($purple, 5)
+
+    &--toggled
+      background-color: transparent
+
+      &:hover
+        background-color: transparent
+
+  &__menu
+    background: transparent
+
+    > li
+      height: 60px !important
+      line-height: 60px !important
+      position: relative !important
+
+      &.ant-menu-item-selected
+        background: linear-gradient(to left, rgba($light, 0.1), rgba($light, 0.08))
+
+        &::after
+          visibility: hidden
+
+      &::after
+        background: linear-gradient(to left, rgba($light, 0.1), rgba($light, 0.08))
+        bottom: 0
+        content: ''
+        height: 1px
+        left: 0
+        position: absolute
+        width: 100%
+
+      &:last-child
+        &::after
+          display: none
+
+    &-bottom
+      margin-top: 100px
+
+  &::after
+    border-radius: 0 $border-radius 0 0
+    box-shadow: 4px -4px 6px 0 rgba($purple, 0.7)
+    content: ''
+    height: 40px
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+    z-index: -1
+
+  &--collapsed
+    &::after
+      box-shadow: none
