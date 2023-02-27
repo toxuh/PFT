@@ -3,11 +3,8 @@
 $border-radius: 16px
 
 .navbar
-  background: linear-gradient(to left bottom, rgba($light, 0.06), rgba($light, 0.01)) !important
-  border: 1px solid rgba(255, 255, 255, 0.04)
-  border-radius: $border-radius
-  padding: 20px
-  position: relative
+  background: transparent !important
+  border: none !important
 
   &__logo
     font-size: 20px
@@ -23,8 +20,8 @@ $border-radius: 16px
     cursor: pointer
     padding: 10px
     position: absolute
-    right: 0
-    top: 0
+    right: -1px
+    top: -1px
 
     &:hover
       background-color: lighten($purple, 5)
@@ -49,6 +46,9 @@ $border-radius: 16px
         &::after
           visibility: hidden
 
+      &:active
+        background: transparent !important
+
       &::after
         background: linear-gradient(to left, rgba($light, 0.1), rgba($light, 0.08))
         bottom: 0
@@ -63,9 +63,9 @@ $border-radius: 16px
           display: none
 
     &-bottom
-      margin-top: 100px
+      margin-top: 120px
 
-  &::after
+  &::before
     border-radius: 0 $border-radius 0 0
     box-shadow: 4px -4px 6px 0 rgba($purple, 0.7)
     content: ''
@@ -77,5 +77,5 @@ $border-radius: 16px
     z-index: -1
 
   &--collapsed
-    &::after
+    &::before
       box-shadow: none
