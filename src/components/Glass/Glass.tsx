@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import './Glass.sass'
 
-type color = 'purple'
+type color = 'purple' | 'yellow'
 
 interface Props {
   children: React.ReactNode

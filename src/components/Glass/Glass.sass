@@ -20,9 +20,17 @@ $border-radius: 16px
     width: 100%
 
   &.purple-color
-    background: linear-gradient(to left bottom, rgba($light-purple, 0.06), rgba($light-purple, 0.01))
-    border: 1px solid rgba($light-purple, 0.07)
+    background: linear-gradient(to left bottom, rgba(lighten($purple, 40%), 0.06), rgba(lighten($purple, 40%), 0.01))
+    border: 1px solid rgba(lighten($purple, 40%), 0.07)
     box-shadow: 0 0 10px 0 rgba($purple, 0.1)
 
     &::after
       background: linear-gradient(to right, rgba($purple, 0), rgba($purple, 1), rgba($purple, 0))
+
+  &.yellow-color
+    background: linear-gradient(to left bottom, rgba(lighten($yellow, 40%), 0.06), rgba(lighten($yellow, 40%), 0.01))
+    border: 1px solid rgba(lighten($yellow, 40%), 0.07)
+    box-shadow: 0 0 10px 0 rgba($yellow, 0.1)
+
+    &::after
+      background: linear-gradient(to right, rgba($yellow, 0), rgba($yellow, 1), rgba($yellow, 0))
